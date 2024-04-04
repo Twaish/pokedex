@@ -8,6 +8,7 @@ export default function PokemonCard({ pokemon }) {
   const { id, name, sprites, types, stats, weight, height, abilities } = pokemon
   const image = sprites.front_default
   
+  const addedAbilities = []
   function onClick() {
     toast.custom((t) => (
       <div className={styles.toast}>
@@ -31,7 +32,11 @@ export default function PokemonCard({ pokemon }) {
         <InfoGroup name={"Abilities"}>
           {abilities.map(abilityEntry => {
             const abilityName = abilityEntry.ability.name
-            return <Stat key={name+abilityName} name={abilityName} />
+            if (addedAbilities.indexOf(abilityName) === -1) {
+              addedAbilities.push(abilityName)
+              return <Stat key={name+abilityName} name={abilityName} />
+            }
+
           })}
         </InfoGroup>
       </div>
@@ -40,7 +45,7 @@ export default function PokemonCard({ pokemon }) {
 
   return (
     <div className={styles.card} onClick={onClick}>
-      <img className={styles.image} alt="sprite" src={image} />
+      <img className={styles.image} src={image ?? "pokedex/missing.png"} />
       <div>
         <div className={styles.index}>#{id}</div>
         <div className={styles.name}>{name}</div>

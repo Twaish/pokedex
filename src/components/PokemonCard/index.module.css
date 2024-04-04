@@ -26,7 +26,10 @@
   font-size: .8rem;
 }
 .image {
-  max-width: 100px;
+  max-width: 96px;
+  max-height: 96px;
+  width: 96px;
+  height: 96px;
   user-select: none;
 }
 
