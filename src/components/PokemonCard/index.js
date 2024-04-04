@@ -7,8 +7,22 @@ import InfoGroup from "./InfoGroup"
 export default function PokemonCard({ pokemon }) {
   const { id, name, sprites, types, stats, weight, height, abilities } = pokemon
   const image = sprites.front_default
+
+  const createAbilities = () => {
+    const addedAbilities = []
+    return abilities.map(abilityEntry => {
+      const abilityName = abilityEntry.ability.name
+      if (addedAbilities.indexOf(abilityName) === -1) {
+        addedAbilities.push(abilityName)
+        return <Stat key={name+abilityName} name={abilityName} />
+      }
+    })
+  }
+
+  if (abilities.length === 0) {
+    console.log(name)
+  }
   
-  const addedAbilities = []
   function onClick() {
     toast.custom((t) => (
       <div className={styles.toast}>
@@ -30,14 +44,7 @@ export default function PokemonCard({ pokemon }) {
           <Stat name={"Height"} value={height} />
         </InfoGroup>
         <InfoGroup name={"Abilities"}>
-          {abilities.map(abilityEntry => {
-            const abilityName = abilityEntry.ability.name
-            if (addedAbilities.indexOf(abilityName) === -1) {
-              addedAbilities.push(abilityName)
-              return <Stat key={name+abilityName} name={abilityName} />
-            }
-
-          })}
+          {createAbilities()}
         </InfoGroup>
       </div>
     ), { duration: 2000 });
