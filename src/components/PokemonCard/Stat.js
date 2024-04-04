@@ -12,7 +12,7 @@ const abbreviations = {
 export default function Stat({ name, value }) {
   return (
     <div className={styles.stat}>
-      {abbreviations[name] ?? name}: {value}
+      {abbreviations[name] ?? name}{value ? `: ${value}` : ""}
     </div>
   )
 }
