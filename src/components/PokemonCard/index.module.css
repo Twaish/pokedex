@@ -1,0 +1,80 @@
+.card {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 .5rem;
+  border-radius: var(--radius-md);
+  --base-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: var(--base-shadow);
+  border: 1px solid transparent;
+  transition: all .15s;
+}
+.card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--base-shadow), 0 0 5px var(--blue);
+}
+.card:hover:active {
+  box-shadow: var(--base-shadow), 0 0 10px var(--blue);
+}
+.name {
+  text-transform: capitalize;
+  font-size: .9rem;
+}
+.index {
+  color: gray;
+  font-size: .8rem;
+}
+.image {
+  max-width: 100px;
+  user-select: none;
+}
+
+.toast {
+  display: flex;
+  flex-direction: column;
+  width: 356px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.toast hr {
+  margin: .5rem 0;
+}
+.toast .name {
+  max-width: 60%;
+}
+
+.type {
+  font-size: .8rem;
+  padding: .25rem;
+  color: #fff;
+  background-color: var(--type-color);
+  --chip-radius: var(--radius-sm);
+}
+.type:first-child {
+  border-top-left-radius: var(--chip-radius);
+  border-bottom-left-radius: var(--chip-radius);
+}
+.type:last-child {
+  border-top-right-radius: var(--chip-radius);
+  border-bottom-right-radius: var(--chip-radius);
+}
+.types {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+.stat {
+  font-size: .8rem;
+  padding: .35rem;
+}
+
+.group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}

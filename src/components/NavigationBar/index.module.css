@@ -1,0 +1,13 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.item {
+  cursor: pointer;
+}
+.item:hover {
+  text-decoration: underline;
+}
