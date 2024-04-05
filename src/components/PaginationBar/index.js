@@ -24,7 +24,6 @@ export default function PaginationBar() {
       nextPage()
     }
   }
-  
   useEffect(() => {
     window.addEventListener("keydown", onKeyDown)
     return () => {

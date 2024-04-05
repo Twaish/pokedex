@@ -1,5 +1,3 @@
-import styles from "./index.module.css"
-
 const abbreviations = {
   "hp": "HP",
   "attack": "Atk",
@@ -11,8 +9,8 @@ const abbreviations = {
 
 export default function Stat({ name, value }) {
   return (
-    <div className={styles.stat}>
-      {abbreviations[name] ?? name}{value ? `: ${value}` : ""}
+    <div className="text-xs p-1">
+      {abbreviations[name] ?? name}{(value !== null && value !== undefined) ? `: ${value}` : ""}
     </div>
   )
 }

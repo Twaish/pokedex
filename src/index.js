@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom/client';
-import { Route, Routes, BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 import "./global.css"
-import Home from './pages/Home';
+// import Home from './pages/Home';
 import About from './pages/About';
 import Pokedex from './pages/Pokedex';
 import Layout from './layout';

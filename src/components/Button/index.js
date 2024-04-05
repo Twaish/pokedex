@@ -4,7 +4,7 @@ export default function Button({ children, onClick, hidden }) {
 
   return (
     <div 
-      onClick={onClick} 
+      onClick={onClick}
       className={`${styles.button} ${hidden ? styles.hidden : ""}`}
     >
       {children}

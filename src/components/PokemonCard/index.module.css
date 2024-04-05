@@ -17,6 +17,7 @@
 .card:hover:active {
   box-shadow: var(--base-shadow), 0 0 10px var(--blue);
 }
+
 .name {
   text-transform: capitalize;
   font-size: .9rem;
@@ -25,6 +26,7 @@
   color: gray;
   font-size: .8rem;
 }
+
 .image {
   max-width: 96px;
   max-height: 96px;
@@ -63,18 +65,6 @@
 .type:last-child {
   border-top-right-radius: var(--chip-radius);
   border-bottom-right-radius: var(--chip-radius);
-}
-.types {
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 1rem;
-}
-
-.stat {
-  font-size: .8rem;
-  padding: .35rem;
 }
 
 .group {

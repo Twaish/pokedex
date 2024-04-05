@@ -4,7 +4,7 @@ import styles from "./index.module.css"
 export default function NavigationBar() {
   const navigate = useNavigate()
   return (
-    <div className={styles.navigation}>
+    <div className="flex justify-center gap-4 p-4 mb-4">
       {/* <div className={styles.item} onClick={() => navigate("/")} >HOME</div> */}
       <div className={styles.item} onClick={() => navigate("/pokedex")} >POKEDEX</div>
       <div className={styles.item} onClick={() => navigate("/about")}>ABOUT</div>

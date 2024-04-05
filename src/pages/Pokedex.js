@@ -59,11 +59,7 @@ export default function Pokedex() {
         {loading ? (
           <div>Loading...</div>
         ) : pokemon?.map(pokemon => 
-          <PokemonCard 
-            key={pokemon.name} 
-            pokemon={pokemon} 
-            abortSignal={abortController.signal} 
-          />
+          <PokemonCard key={pokemon.name} pokemon={pokemon}/>
         )}
       </Grid>
       <PaginationBar />
