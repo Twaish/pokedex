@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef } from "react"
-import { PaginationContext } from "../../contexts/PaginationContext"
+import { PaginationContext } from "../../context/PaginationContext"
 import Button from "../Button"
 import styles from "./index.module.css"
 
@@ -32,7 +32,7 @@ export default function PaginationBar() {
   }, [onKeyDown])
 
   return (
-    <div className="flex justify-between align-center">
+    <div className="flex justify-between items-center">
       <div className={`${styles.group} ${page === 1 ? styles.disabled : ""}`}>
         <Button onClick={firstPage}>
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11 17-5-5 5-5"></path><path d="m18 17-5-5 5-5"></path></svg>

@@ -1,12 +1,11 @@
 import ReactDOM from 'react-dom/client';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
 
 import "./global.css"
-// import Home from './pages/Home';
 import About from './pages/About';
 import Pokedex from './pages/Pokedex';
 import Layout from './layout';
-import { PaginationProvider } from './contexts/PaginationContext';
+import { PaginationProvider } from './context/PaginationContext';
 
 function App() {
   return (
@@ -14,9 +13,9 @@ function App() {
       <BrowserRouter>
         <Layout>
           <Routes>
-            {/* <Route path="/" Component={Home} /> */}
-            <Route path="/about" Component={About} />
-            <Route path="/pokedex" Component={Pokedex} />
+            <Route path="/" Component={Pokedex} />
+            <Route path="/about" Component={About} />   
+            <Route path="*" element={<Navigate to="/" />} />         
           </Routes>
         </Layout>
       </BrowserRouter>
@@ -26,7 +25,3 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
-
-if (window.location.pathname === "/") {
-  window.location.replace("/pokedex")
-}

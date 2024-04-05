@@ -6,7 +6,7 @@ export default function NavigationBar() {
   return (
     <div className="flex justify-center gap-4 p-4 mb-4">
       {/* <div className={styles.item} onClick={() => navigate("/")} >HOME</div> */}
-      <div className={styles.item} onClick={() => navigate("/pokedex")} >POKEDEX</div>
+      <div className={styles.item} onClick={() => navigate("/")} >POKEDEX</div>
       <div className={styles.item} onClick={() => navigate("/about")}>ABOUT</div>
     </div>
   )

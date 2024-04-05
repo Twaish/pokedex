@@ -1,0 +1,50 @@
+.popover {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .5rem;
+  min-width: 250px;
+}
+.popover > * {
+  justify-content: space-between;
+  border-width: 1px;
+  padding: .25rem .5rem;
+  border-radius: var(--radius-sm);
+  transition: all .15s;
+}
+.popover > *:hover {
+  border-color: var(--blue);
+  box-shadow: 0 0 5px var(--blue);
+}
+.popover > *:hover:active {
+  box-shadow: 0 0 10px var(--blue);
+}
+
+.toggle {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+  padding: .5rem;
+  width: min-content;
+  border-width: 1px;
+  border-radius: var(--radius-md);
+  --base-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: var(--base-shadow);
+  transition: all .15s;
+}
+.toggle:hover {
+  border-color: var(--blue);
+  box-shadow: var(--base-shadow), 0 0 5px var(--blue);
+}
+.toggle:hover:active {
+  box-shadow: var(--base-shadow), 0 0 10px var(--blue);
+}
+.toggle svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all .3s;
+}

@@ -9,6 +9,7 @@
   box-shadow: var(--base-shadow);
   border: 1px solid transparent;
   transition: all .15s;
+  min-height: 50px;
 }
 .card:hover {
   border-color: var(--blue);

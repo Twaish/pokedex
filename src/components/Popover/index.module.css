@@ -1,0 +1,17 @@
+.popover {
+  position: fixed;
+  top: var(--y);
+  left: var(--x);
+  background-color: #fff;
+  border-width: 1px;
+  z-index: 9;
+  transform-origin: var(--x-origin) var(--y-origin);
+  transition: all .3s;
+  border-radius: var(--radius-md);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.popover:not(.active) {
+  pointer-events: none;
+  opacity: 0;
+  scale: 0;
+}

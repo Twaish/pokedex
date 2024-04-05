@@ -1,17 +1,17 @@
 import { createContext, useState } from "react";
+import storage from "../utils/Storage";
 
 const PAGE_KEY = "POKEDEX_LAST_PAGE"
 export const PaginationContext = createContext()
 
 export function PaginationProvider({ children }) {
-  const storedPage = parseInt(localStorage.getItem(PAGE_KEY))
-  const [page, setPageState] = useState(isNaN(storedPage) ? 1 : storedPage)
+  const [page, setPageState] = useState(storage.getInt(PAGE_KEY, 1))
   const [pageCount, setPageCount] = useState(1)
   function setPage(newPage) {
     try {
       newPage = parseInt(newPage)
       newPage = Math.min(Math.max(newPage, 1), pageCount)
-      localStorage.setItem(PAGE_KEY, newPage)
+      storage.setInt(PAGE_KEY, newPage)
       setPageState(newPage)
     } catch(err) {
       console.error(err)

@@ -1,0 +1,27 @@
+.switch {
+  position: relative;
+  height: 1.4rem;
+  width: 2.4rem;
+  border-width: 1px;
+  border-color: darkgray;
+  border-radius: var(--radius-md);
+}
+.switch.active {
+  border-color: var(--blue);
+}
+.handle {
+  position: absolute;
+  top: 50%;
+  left: .2rem;
+  transform: translateY(-50%);
+  height: 1rem;
+  width: 1rem;
+  background-color: darkgray;
+  border-radius: var(--radius-sm);
+  transition: all .3s;
+}
+
+.switch.active .handle {
+  left: 50%;
+  background-color: var(--blue);
+}
