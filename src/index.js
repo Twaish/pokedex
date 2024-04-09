@@ -13,9 +13,9 @@ function App() {
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path="/" Component={Pokedex} />
+            <Route path="/pokedex" Component={Pokedex} />
             <Route path="/about" Component={About} />   
-            <Route path="*" element={<Navigate to="/" />} />         
+            <Route path="*" element={<Navigate to="/pokedex" />} />         
           </Routes>
         </Layout>
       </BrowserRouter>

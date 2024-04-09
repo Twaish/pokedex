@@ -1,7 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./index.module.css"
 
-export default function Popover({ className, children, margin = 5, trigger, side = "bottom", anchor }) {
+export default function Popover({ 
+  className, 
+  children, 
+  margin = 5, 
+  trigger, 
+  side = "bottom", 
+  anchor
+}) {
   const [open, setOpen] = useState(false)
   const position = {x: 0, y: 0}
   const popoverRef = useRef(null)
